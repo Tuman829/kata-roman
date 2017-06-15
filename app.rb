@@ -1,11 +1,10 @@
 
 def romanize(number)
-	result = ""
-	  #converts an int to a roman numeral string
+	result = ""	  #converts an int to a roman numeral string
 
-  	@numerals.each do |digit, numeral|
+  	@numerals.each do |digit, roman|
   		while number >= digit do
-	  		result << numeral*(number/digit) # string multiplication in ruby only works with whole numbers
+	  		result << roman*(number/digit) # string multiplication in ruby only works with whole numbers
 	  		number = (number % digit) #removes the parts of the number already added or leaves it the same otherwise 
 	  	end
   	end
@@ -13,7 +12,14 @@ def romanize(number)
 end
 
 def arabicize(numeral)
-	
+	result = 0
+	@numerals.each do |digit, letter|
+		while numeral.start_with?(letter) do
+			result = result + digit
+			numeral = numeral.slice(letter.length,numeral.length)
+		end
+	end
+	return result
 
 	
 end
@@ -33,4 +39,4 @@ end
 	        1 => "I",  
   				}
 
-puts romanize(99)
+#puts romanize(99)
