@@ -1,4 +1,4 @@
-#require "./app.rb"
+require_relative "../app.rb"
 describe "romanize" do
 	context "given 5" do
 		it "returns 'V'" do
@@ -29,7 +29,7 @@ describe "arabicize" do
 	end
 	context "given 99" do
 		it "return 'XCIX'" do
-			expect(arabicize("XCIX")).to eql(99)
+			expect(arabicize("XCIX")).to eql(99) 
 		end
 	end
 end
