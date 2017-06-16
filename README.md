@@ -1,4 +1,4 @@
-# Pillar kata: Roman/Arabic numeral converter. 
+# Pillar kata: Roman/Arabic numeral converter
 
 ## Set up instructions:
 
