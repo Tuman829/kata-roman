@@ -3,7 +3,7 @@
 ## Set up instructions:
 
 This will allow one to open IRB with methods available. These depend on the system including ruby.
-in terminal:
+In terminal:
 ```
 gem install bundler
 
